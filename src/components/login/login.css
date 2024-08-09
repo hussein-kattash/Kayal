@@ -1,0 +1,173 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+p{ 
+    margin-bottom: 0px;
+}
+/* 234250 */
+.LogIn-page{
+    background: linear-gradient(to right bottom, #234250, rgba(200, 200, 200));
+}
+.LogIn-form-page{
+    
+    backdrop-filter: blur(40px);
+    background: linear-gradient(to right bottom,
+            rgba(255, 255, 255, 0.2),
+            rgba(255, 255, 255, 0.1));
+    width: 370px;
+    height:90vh;
+    margin:5vh  auto;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.LogIn-form-page form{
+    
+    backdrop-filter: blur(40px);
+    height: inherit;
+    width: 100%;
+    border-radius: 9px;
+
+    
+}
+.logo {
+    width: 100%;
+    border-bottom:solid rgba(255, 255, 255, 0.32) 5px  ;
+    border-top:solid rgba(255, 255, 255, 0.32) 5px ;
+padding: 10px;
+    text-align: center;
+    font-size: 30px;   
+    margin-top:60px ; 
+    color: white;
+}
+.username,.password,.log{
+    width: 80%;
+    margin: auto;
+}
+.username{
+    padding-bottom: 40px;
+}
+
+.username input:hover,
+.password input:hover 
+{box-shadow: inset 0px 0px 7px 1px;
+}
+.username input,.password input ,.log input {
+text-align: center;
+width: 100%; 
+height: 60px;
+border-radius:10px ;
+outline: none;
+border: none;
+transition: 0.5s;
+overflow: visible;
+
+}
+.username input{margin: 80px auto 0px;}
+
+.log input{margin-top: 70px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(35, 66, 80, 0.1) ,  rgba(0, 0, 0, 0.1) );
+    color: #fff;
+    font-size:20px ;
+    cursor: pointer;
+    transition:0.5s;
+    box-shadow: 0px 0px 0px 3px inset;
+    overflow: visible;
+    
+
+}
+.log input:hover{
+    padding: 10px;
+    color:#234250 ;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(35, 66, 80, 0.1) ,  rgba(0, 0, 0, 0.1) );
+
+    box-shadow: 0px 0px 0px 3px inset;
+}
+div .error{
+    margin-top: 2px;
+    text-align: center;
+    color: red;
+
+}
+
+
+
+
+@media (min-width: 600px) {
+    .square {
+        height: 100vh;
+        width: 50vw;
+        display: table;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.1);
+        transform: rotate(45deg);
+    }
+    
+    .square.square-tl { 
+        top: -80%;
+        left: -10%;
+        animation: bounce 6s infinite ease-in-out;
+        background: rgb(34, 34, 34, 0.1);
+        z-index: 50;
+    }
+    
+    .square.square-tr {
+        top: 0%;
+        right: -30%;
+        animation: bounce 5s infinite ease-in-out;
+    }
+    
+    .square.square-bl {
+        bottom: -70%;
+        left: -15%;
+        animation: bounce 4s infinite ease-in-out;
+    }
+    
+    .square.square-br {
+        bottom: 0%;
+        right: -40%;
+        animation: bounce 3s infinite ease-in-out;
+        background: rgb(34, 34, 34, 0.1);
+    }
+    
+    @keyframes bounce {
+        0% {transform: translateY(0px) rotate(45deg)}
+        50% {
+            transform: translateY(20px) rotate(45deg); border-radius: 50px;
+        }
+        100% {transform: translateY(0px) rotate(45deg)}
+    }
+    
+    .star {
+        height: 50px;
+        width: 50px;    
+        display: table;
+        position: absolute;
+        box-shadow: 0 0 5px 0 rgba(34, 34, 34, 0.5);
+        transition: 0.5s;
+    }
+    
+    .star1 {
+        bottom: -10%;
+        left: -30%;
+        transform: rotate(-30deg);
+        animation: sweep 4s infinite;
+        background: rgba(34, 34, 34, 0.5);
+    }
+    
+    .star2 {
+        bottom: -30%;
+        left: -10%;
+        transform: rotate(-30deg);
+        animation: sweep 3s infinite;
+        background: rgb(255, 255, 255, 0.5);
+    }
+
+
+
+}
+    

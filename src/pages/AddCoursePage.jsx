@@ -78,7 +78,6 @@ const AddCoursePage = () => {
           label="Center"
           variant="filled"
         />
-        {/* <Button onClick={createCourse} variant="contained" sx={{textTransform:'capitalize'}}>Create Course</Button> */}
         <LoadingButton
           loading={loading}
           loadingPosition="start"

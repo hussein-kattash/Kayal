@@ -5,40 +5,9 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { useFetchCourses } from '../../hooks/useFetchCourses';
-import { useDeleteCourse } from '../../hooks/useDeleteCourse';
 import { CircularProgress } from '@mui/material';
 
-const ConfrimDialog = ({ handleClose, open, courseId})=>{
-  const {getAllCourses} = useFetchCourses()
-  const {deleteCourse, loading} = useDeleteCourse(courseId)
-
-  const notify = () =>
-    toast.success("successfully deleted!", {
-      position: "top-right",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-    });
-
-    async function confirmDelete() {
-      const res = await deleteCourse();
-      if (res === 200) {
-        notify();
-        handleClose();
-        setTimeout(() => {
-          getAllCourses();
-        }, 3000);
-      } else {
-        handleClose();
-      }
-    }
+const ConfrimDialog = ({ handleClose, open, confirmDelete, loading})=>{
 
   return (
     <React.Fragment>

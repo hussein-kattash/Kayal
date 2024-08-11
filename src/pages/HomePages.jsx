@@ -6,7 +6,7 @@ function HomePages() {
     <div>
       <Navbar/>
       <Box sx={{padding:'20px'}}>
-        <Typography variant='h3'>Welcome to the dashbord</Typography>
+        <Typography variant='h3'>Welcome to dashbord</Typography>
       </Box>
     </div>
   )
